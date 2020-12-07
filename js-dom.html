@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>DOM </title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    </head>
+    <body>
+<p id="value1"></p>
+<p id="value"></p>
+<img id="myImg" src="DOM.png" alt="DOM" width="300px" height="300px">
+<div style="margin-bottom: 30px;"></div>
+<button type="button" onclick="myFunction()">Change text color</button>
+<button onclick="hideImg()">Hide & Show image</button>
+<script>
+document.getElementById("value").innerHTML = "We are coders!";
+document.getElementById("value1").innerHTML = "Developers for life!";
+document.getElementById("myImg").src = "DOM.png";
+
+function myFunction() {
+  document.getElementById("value1").style.color = "green";
+  document.getElementById("value").style.color = "green";
+}
+
+document.getElementById("value1").style.fontSize = "40px";
+
+function hideImg() {
+  let x = document.getElementById("myImg");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+</script>
+    </body>
+</html>
